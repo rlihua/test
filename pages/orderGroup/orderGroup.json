@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "alert": "/components/alert/alert"
+  },
+  "navigationBarTitleText": "订单类表页"
+}

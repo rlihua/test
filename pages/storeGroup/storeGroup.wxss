@@ -1,0 +1,169 @@
+.text-center {
+    text-align: center; }
+
+.text-right {
+    text-align: right; }
+
+.text-left {
+    text-align: left; }
+
+.float-right {
+    float: right; }
+
+.float-left {
+    float: left; }
+
+.margin-right-10 {
+    margin-right: 10rpx; }
+
+.margin-right-20 {
+    margin-right: 20rpx; }
+
+.margin-right-30 {
+    margin-right: 30rpx !important; }
+
+.margin-left-15 {
+    margin-left: 15rpx; }
+
+.margin-right-15 {
+    margin-right: 15rpx; }
+
+.margin-left-10 {
+    margin-left: 10rpx; }
+
+.margin-left-20 {
+    margin-left: 20rpx; }
+
+.margin-left-30 {
+    margin-left: 30rpx !important; }
+
+.inline-block {
+    display: inline-block; }
+
+.main-color {
+    color: #45B549; }
+
+.fa-check-circle:before {
+    content: "\f058";
+    font-size: 24rpx !important; }
+
+page {
+    background: #eee; }
+page .swiper-tab {
+    width: 90%;
+    text-align: center;
+    height: 110rpx;
+    line-height: 110rpx;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    z-index: 101;
+    margin-left: 5%; }
+page .swiper-tab-item {
+    width: 50%;
+    color: #434343;
+    font-size: 16px; }
+page .active {
+    color: #1AAD19; }
+page swiper {
+    text-align: center;
+    height: 100%; }
+page .swiper-item-tab {
+    width: 95%;
+    margin: auto; }
+page .top-image {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 5px; }
+page .store-list-top {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background: #eee;
+    z-index: 999; }
+page .no-date-view {
+    margin-top: 30%;
+    text-align: center;
+    font-size: 30rpx;
+    color: #bfbfbf; }
+page .no-date-view image {
+    width: 30%;
+    margin-bottom: 10px; }
+page .search-input-block {
+    vertical-align: middle;
+    background: #fff;
+    border-radius: 10rpx;
+    padding: 10rpx 2.5%;
+    width: 90%;
+    margin-left: 2.5%;
+    margin-top: 20rpx; }
+page .search-input-block .search-fa-style {
+    font-size: 36rpx;
+    color: #1AAD19; }
+page .search-input-block .clear-value {
+    font-size: 34rpx;
+    color: #b2b2b2;
+    position: relative; }
+page .store-list-layer .store-list-body {
+    width: 95%;
+    margin-left: 2.5%;
+    font-size: 34rpx;
+}
+page .store-list-layer .store-list-body .store-position-view {
+    background: #fff;
+    padding: 20rpx 35rpx;
+    border-radius: 6rpx;
+    margin-top: 20rpx; }
+page .store-list-layer .store-list-body .store-list-each {
+    margin-top: 20rpx;
+    background: #fff;
+    border-radius: 6rpx;
+    padding: 30rpx 35rpx; }
+page .store-list-layer .store-list-body .store-list-each .weui-check__label {
+    padding-bottom: 20rpx; }
+page .store-list-layer .store-list-body .store-list-each .store-each-address {
+    font-size: 32rpx;
+    padding: 20rpx 0rpx;
+    color: #333;
+    font-family: "Microsoft YaHei" !important; }
+page .store-list-layer .store-list-body .store-list-each .store-list-each-top {
+    vertical-align: middle;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 32rpx;
+    color: #333; }
+page .store-list-layer .store-list-body .store-list-each .store-list-each-top .store-each-title {
+    flex-grow: 8;
+    flex-shrink: 0; }
+page .store-list-layer .store-list-body .store-list-each .store-list-each-top .store-each-distance {
+    flex-grow: 1;
+    flex-shrink: 0; }
+page .store-list-layer .store-list-body .store-list-each .store-each-footer {
+    font-size: 28rpx;
+    color: #fff;
+    margin-top: 10rpx; }
+page .store-list-layer .store-list-body .store-list-each .store-each-footer button {
+    font-size: 32rpx; }
+page .store-list-layer .store-list-body .store-list-each .store-each-footer .button-order {
+    width: 100%;
+    display: inline-block; }
+page .store-list-layer .store-list-body .store-list-each .store-each-footer .not-use-btn {
+    background: #bbb; }
+page .store-list-layer .store-list-body .store-list-each .store-each-footer .icon-order {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px; }
+page .store-list-layer .store-list-body .body-hidden .store-each-title {
+    color: #333 !important; }
+page .store-list-layer .store-list-body .body-hidden .store-each-distance {
+    color: #333 !important; }
+page .store-list-layer .store-list-body .body-hidden .store-each-address {
+    color: #666 !important;
+    padding-bottom: 0px !important; }
+
+/*# sourceMappingURL=store_list.wxss.map */

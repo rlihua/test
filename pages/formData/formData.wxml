@@ -1,0 +1,37 @@
+<view class="form-view">
+    <form bindsubmit="formSubmit" bindreset="formReset" report-submit="true">
+        <view class="section">
+            <input name="input" placeholder="请输入你的姓名" />
+        </view>
+        <view class="section section_gap">
+            <view class="section__title">性别</view>
+            <radio-group name="radio-group">
+                <label>
+                    <radio value="radio1" />
+                    男
+                </label>
+                <label>
+                    <radio value="radio2" />
+                    女
+                </label>
+            </radio-group>
+        </view>
+        <view class="section section_gap">
+            <view class="section__title">爱好</view>
+            <checkbox-group name="checkbox">
+                <label>
+                    <checkbox value="checkbox1" />
+                    睡觉
+                </label>
+                <label>
+                    <checkbox value="checkbox2" />
+                    吃饭
+                </label>
+            </checkbox-group>
+        </view>
+        <view class="btn-area">
+            <button form-type="submit" class="submit-btn">提交</button>
+            <button form-type="reset" class="submit-btn">重置</button>
+        </view>
+    </form>
+</view>

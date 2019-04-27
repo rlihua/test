@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <view bindtap="getPreData">
+    <button bindtap="getData">获取信息</button>
+  </view>
+
+  <navigator url="/pages/orderGroup/orderGroup" open-type="switchTab" class="nav-go-order">订单列表</navigator>
+  <navigator url="/pages/storeGroup/storeGroup" class="nav-go-order">门店列表</navigator>
+  <navigator url="/pages/formData/formData" class="nav-go-order">表单提交</navigator>
+</view>

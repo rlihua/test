@@ -1,0 +1,7 @@
+<template name="orderTemplate">
+    <view class="order-table-each">
+        <view class="order-table-none"></view>
+        <view class="order-table-label">{{title}}</view>
+        <view class="order-table-value">{{value}}</view>
+    </view>
+</template>

@@ -1,0 +1,65 @@
+<import src="./orderTemplate/orderTemplate.wxml"/>
+<view class="order-table-layer">
+    <view class="order-table-body">
+        <!--<view  style="font-size:{{titleStyle['font-size']}};color:{{titleStyle['color']}}">订单类表</view>-->
+        <view  style="{{titleStyle}}">订单类表</view>
+        <block wx:for-items="{{orderGroup}}" wx:key="idex" wx:for-index="idex" wx:for-item="itemInfo">
+            <view class="order-table-each-info">
+                <navigator url="../order_info/order_info?orderid={{itemInfo['id']['value']}}" hover-class="other-navigator-hover">
+                    <view class="order-table-top">
+                        <text class="order-store-name">{{itemInfo['title']}}</text>
+                    </view>
+                    <view class="order-table-content">
+                        <block wx:for-items="{{itemInfo}}" wx:key="idKey" wx:for-index="idex1" wx:for-item="item" wx:if="{{idex1 != 'id'}}">
+                            <template is="orderTemplate" data="{{...item}}"/>
+                        </block>
+                        <!--<view class="order-table-each">
+                            <view class="order-table-none"></view>
+                            <view class="order-table-label">取餐号码</view>
+                            <view class="order-table-value">{{itemInfo['orderSn']['value']}}号</view>
+                        </view>
+                        <view class="order-table-each">
+                            <view class="order-table-none"></view>
+                            <view class="order-table-label">支付金额</view>
+                            <view class="order-table-value">￥{{itemInfo['totalprice']['value']}}</view>
+                        </view>
+                        <view class="order-table-each">
+                            <view class="order-table-none"></view>
+                            <view class="order-table-label">支付方式</view>
+                            <view class="order-table-value">{{itemInfo['paytype']['value']}}</view>
+                        </view>
+                        <view class="order-table-each">
+                            <view class="order-table-none"></view>
+                            <view class="order-table-label">下单时间</view>
+                            <view class="order-table-value">{{itemInfo['orderDate']['value']}}</view>
+                        </view>
+                        <view class="order-table-each">
+                            <view class="order-table-none"></view>
+                            <view class="order-table-label">订单状态</view>
+                            <view class="order-table-value {{itemInfo['status']['value'] == 1 ? 'success-status':'failed-status'}}">{{itemInfo['status']['value'] == 1?'支付完成':'未支付'}}</view>
+                        </view>-->
+                    </view>
+                    <view class="order-table-footer text-right">
+                        <view class="navigator order-table-dis-btn margin-right-10">
+                            查看明细
+                        </view>
+                        <view class="navigator del-order-btn" catchtap="delOrder" data-id="{{itemInfo['id']['value']}}">
+                            删除订单
+                        </view>
+                    </view>
+                </navigator>
+            </view>
+        </block>
+    </view>
+    <alert id='dialog'
+        title='提示'
+        content='你确定要删除？'
+        cancelText='取消'
+        confirm='确定'
+        isShow='{{isShow}}'
+        bind:doCancel="_cancelEvent"
+        bind:doConfirm="_confirmEvent">
+        <view slot="frist">1111</view>
+        <view slot="two">22222</view>
+    </alert>
+</view>

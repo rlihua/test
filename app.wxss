@@ -1,0 +1,6 @@
+@import "static/css/weui.wxss";
+@import "static/css/icon.wxss";
+/**app.wxss**/
+.margin-right-10{
+    margin-right: 10px;
+}

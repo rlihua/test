@@ -1,0 +1,12 @@
+/* pages/formData/formData.wxss */
+.form-view{
+    width: 80%;
+    background: #fff;
+    margin: auto;
+}
+.submit-btn{
+    margin-top:20px;
+}
+.section{
+    margin-top:20px;
+}

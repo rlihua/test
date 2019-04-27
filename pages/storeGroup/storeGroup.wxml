@@ -1,0 +1,65 @@
+<view class="store-list-layer">
+    <view class="store-list-body">
+        <block wx:for="{{storeGroup}}"
+               wx:for-index="idx"
+               wx:for-item="itemInfo"
+               wx:key="idx">
+            <view class="store-list-each {{itemInfo['selected'] != 1 ? 'body-hidden':''}} {{idx==0?'margin-top-0':''}}"
+                  catchtap="selectStore"
+                  data-storeid="{{itemInfo['storeid']}}">
+                <view class="store-list-each-top">
+                    <view class="store-each-title main-color">
+                        <text class="fa fa-map-marker"
+                              style="font-size: 42rpx;margin-right:20rpx;"
+                              wx:if="{{itemInfo['selected'] == 1}}"></text>{{itemInfo['title']}}</view>
+                    <view class="store-each-distance text-right main-color">{{itemInfo['distance']}}km</view>
+                </view>
+                <view class="store-each-address">
+                    {{itemInfo['address']}}
+                </view>
+                <view hidden="{{itemInfo['selected'] != 1}}">
+                    <view class="store-list-each-body" >
+                        <view class="store-each-seat-type" wx:if="{{dining_mode != 2 || join_type == 1}}">
+                            <radio-group bindchange="radioChange">
+                                <label class="weui-check__label"
+                                       wx:for="{{itemInfo['seat_type']}}"
+                                       wx:key="idex11"  wx:for-index="idex11"
+                                       wx:for-item="radioItem"
+                                       style="display: block">
+                                    <view class="weui-cell__hd inline-block">
+                                        <radio value="{{radioItem.value}}"
+                                               checked="{{radioItem.checked}}"
+                                               disabled="{{(itemInfo['is_meal'] != 1 || itemInfo['store_status'] != 1)}}"
+                                               color="{{(itemInfo['is_meal'] != 1 || itemInfo['store_status'] != 1)?'#E1E1E1':''}}"/>
+                                    </view>
+                                    <view class="weui-cell__bd inline-block"
+                                          wx:if="{{idex11 == 0}}"
+                                          style="font-size: 32rpx;color:#333;">现在，支付成功后在
+                                        <text class="main-color">店内</text>取单</view>
+                                    <view class="weui-cell__bd inline-block"
+                                          style="font-size: 32rpx;color:#333;" wx:else> 稍后，预约稍晚时间
+                                        <text class="main-color">到店</text>取单</view>
+                                </label>
+                            </radio-group>
+                        </view>
+                    </view>
+                    <view class="store-each-footer">
+                        <button type="primary"
+                                catchtap="gotoOrder"
+                                data-storeid="{{itemInfo['storeid']}}"
+                                data-storestatus="{{itemInfo['store_status']}}"
+                                data-storename="{{itemInfo['title']}}"
+                                data-ismeal="{{itemInfo['is_meal']}}"
+                                data-btntype="1"
+                                class="{{join_type==1?'button-order':''}} {{(itemInfo['is_meal'] != 1 || itemInfo['store_status'] != 1)?'not-use-btn':''}}"
+                                wx:if="{{join_type == 1 || dining_mode != 2}}">
+                            <!--<image src="../../common/image/smallIcon/order.png" class="icon-order"></image>-->
+                            <text class="fa fa-cutlery"></text>
+                            前往点餐
+                        </button>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>
